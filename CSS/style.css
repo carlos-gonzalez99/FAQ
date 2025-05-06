@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+RO:wght@100..400&display=swap');
+
+/* || RESET */
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ||VARIABLES */
+
+:root {
+    /* COLORS */
+    --LINK-COLOR: rgb(36, 27, 161); 
+    --LINK-HOVER: rgb(9, 152, 188);
+    --LINK-ACTIVE: purple;
+
+    /* FONTS */
+    --FS: 1em;
+    --FS-H1: 2em;
+    --FS-H2: 1.4em;
+
+    /* STANDARD PADDING */
+    --PADDING-TB: 0.5em;
+    --PADDING-SIDE: 1em;
+}
+
+/* || UTILITY CLASSES */
+
+.nowrap {
+    white-space: nowrap;
+}
+
+/* || GENERAL STYLES */
+
+html {
+    background-image: url(../img/espacio.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: white;
+    border-radius: 15px;
+    border: 0.5px solid black;
+    margin: 2em auto;
+    padding: 1em 0;
+    max-width: 1000px;
+    width: 95%;
+    overflow-x: hidden;
+}
+
+a:any-link {
+    color: var(--LINK-COLOR);
+    text-decoration: none;
+}
+
+a:hover, a:focus-visible {
+    color: var(--LINK-HOVER);
+}
+
+a:active {
+    color: var(--LINK-ACTIVE);
+}
+
+/* || HEADER */
+
+.header__h1 {
+    color: rgb(36, 27, 161);
+    font-family: "Playwrite RO", cursive;
+    font-size: clamp(1.8em, 2vw + 1em, 3em);
+    padding: 0 var(--PADDING-SIDE);
+    text-align: center;
+    word-spacing: 0.2em;
+}
+
+.header__p {
+    font-size: var(--FS);
+    padding: var(--PADDING-SIDE);
+    text-align: center;
+}
+
+/* ||MAIN */
+
+
+.main {
+    background-color: rgba(128, 128, 128, 0.04);
+    font-size: var(--FS);
+    margin: 0 auto;
+    padding: var(--PADDING-TB) 5%;
+    width: 100%;
+}
+
+/* ||ARTICLE 1 */
+
+.article__1--titulo {
+    font-size: var(--FS-H2);
+    padding: var(--PADDING-TB) 0.5em;
+}
+
+.article__1--p {
+    padding: 0.5em var(--PADDING-SIDE);
+    
+}
+
+.article__1--ol {
+    list-style-position: inside;
+    padding: 0 var(--PADDING-SIDE);
+}
+
+/* ARTICLE 2 */
+
+.article__2--titulo {
+    font-size: var(--FS-H2);
+    padding: var(--PADDING-TB) 0.5em;
+}
+
+.article__2--p {
+    padding: 0.5em var(--PADDING-SIDE);
+    
+}
+
+.article__2--ul {
+    list-style-position: inside;
+    padding: 0 var(--PADDING-SIDE);
+}
+
+/* ||FOOTER */
+
+.footer {
+    margin: 2em;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* ||QUERIES */
+
+/* Mobile devices */
+@media screen and (max-width: 480px) {
+    .header__h1 {
+        padding: 0.5em 1em; /* Reducir padding para pantallas pequeñas */
+    }
+    .main {
+        padding: var(--PADDING-TB) 1em;
+    }
+  }
+  
+  /* Tablets */
+  @media screen and (max-width: 768px) {
+    .header__h1 {
+        padding: 0.5em 2em; /* Padding más pequeño en tablets */
+    }
+    .main {
+        padding: var(--PADDING-TB) 1em;
+    }
+  }
+  
+  /* Laptops */
+  @media screen and (max-width: 1024px) {
+    .header__h1 {
+        font-size: 2.4em; /* Ajuste de tamaño de fuente para laptops */
+        padding: 0.5em 4em; /* Padding adaptado */
+    }
+    .main {
+        padding: var(--PADDING-TB) 5em;
+    }
+  }
+  
+  /* Desktop */
+  @media screen and (min-width: 1025px) {
+    .header__h1 {
+        white-space: nowrap;
+        font-size: 2.4em; /* Título más grande en pantallas grandes */
+        padding: 0.5em 4em; /* Padding mayor para pantallas grandes */
+    }
+    .main {
+        padding: var(--PADDING-TB) 5em;
+    }
+  }
